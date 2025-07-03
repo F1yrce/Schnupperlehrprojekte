@@ -41,9 +41,10 @@
       }
 
       .card-overview [slot="footer"] {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         gap: 20px;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       }
       .Price {
         color: green;
@@ -58,6 +59,16 @@
         background: black;
         color: white;
         font-size: 15px;
+      }
+      #detail-bild {
+        width: 400px;
+        height: 600px;
+      }
+      #detail-titel {
+        font-family: sans-serif;
+      }
+      #detail-bereich {
+        background-color: whitesmoke;
       }
     </style>
   </body>

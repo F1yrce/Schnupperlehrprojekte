@@ -1,21 +1,26 @@
 const filme = [
   {
     id: 1,
+    bewertung: "4",
     titel: "Avatar",
     texttitel: "Avatar",
     jahr: 2009,
+    Preis: "CHF 21.99",
     genre: "Science Fiction",
     sprachen1: "English",
     sprachen2: "German",
     sprachen3: "Koreanisch",
     beschreibung:
-      "Avatar (2009) follows a Marine who uses an alien avatar to connect with the Na'vi and ends up defending their world from human exploitation.",
+      "Avatar (2009) is about a Marine who joins an alien world and helps defend it from human exploitation.",
+    detailbeschreibung: "",
     bild: "./images/avatar.jpg",
   },
   {
     id: 2,
+    bewertung: "4",
     titel: "Titanic",
     jahr: 1997,
+    Preis: "CHF 12.99",
     texttitel: "Titanic",
     sprachen1: "English",
     sprachen2: "German",
@@ -23,19 +28,23 @@ const filme = [
     genre: "Drama/Romance",
     beschreibung:
       "Titanic (1997) is a romantic drama about a young couple from different social classes who fall in love aboard the ill-fated RMS Titanic.",
+    detailbeschreibung: "",
     bild: "./images/titanic.jpg",
   },
   {
     id: 3,
+    bewertung: "4.5",
     titel: "Star Wars",
     texttitel: "Star Wars",
     jahr: 1977,
+    Preis: "CHF 9.99",
     sprachen1: "English",
     sprachen2: "German",
     sprachen3: "French",
     genre: "Science Fiction",
     beschreibung:
       "Star Wars (1977) follows a farm boy, Luke Skywalker, who joins a rebellion to defeat the evil Empire and save the galaxy.",
+    detailbeschreibung: "",
     bild: "./images/startwars.jpg",
   },
 ];
@@ -70,7 +79,7 @@ function zeigeFilmeKacheln() {
         </sl-menu>
       </sl-dropdown>
 
-      <p class="Price">$19.99</p>
+      <p class="Price">${film.Preis}</p>
       <small>${film.jahr}</small>
 
       <div slot="footer">
@@ -78,8 +87,8 @@ function zeigeFilmeKacheln() {
         <sl-rating
           label="Rating"
           readonly
-          precision="0.5"
-          value="4.5"
+          precision="0.1"
+          value=${film.bewertung}
         ></sl-rating>
         <sl-button variant="primary" pill>Buy Now</sl-button>
       </div>
@@ -94,7 +103,7 @@ function zeigeFilmDetails(filmId) {
   const container = document.getElementById("film-shop");
   container.innerHTML = `
     <div id="detail-bereich">
-            <h2 id="detail-titel">${film.titel}</h2>
+            <h1 id="detail-titel">${film.titel}</h1>
             <img id="detail-bild" src="${film.bild}" alt="">
             <p id="detail-beschreibung">${film.beschreibung}</p>
             <p><strong>Jahr:</strong> <span id="detail-jahr">${film.jahr}</span></p>
