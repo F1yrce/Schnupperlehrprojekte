@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/themes/light.css"
+    />
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/shoelace-autoloader.js"
+    ></script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BuyYourFavoriteFilms</title>
+  </head>
+  <div class="header">
+    <h1>Buy Your Favorite Films</h1>
+    <p>For very cheap!</p>
+  </div>
+  <body>
+    <sl-card class="card-overview">
+      <img
+        slot="image"
+        src="https://ntvb.tmsimg.com/assets/p28828_v_h8_ac.jpg?w=960&h=540"
+        alt="Movie Poster of the Movie: The Fellowship of the ring"
+      />
+
+      <p class="title">
+        <strong>Lord Of The Rings: The Fellowship of the ring</strong>
+      </p>
+      <br />
+      <em>Fellowship of the Ring</em>
+      follows Frodo, a hobbit tasked with destroying a powerful ring, as he
+      journeys with allies to stop evil from conquering Middle-earth.
+      <br />
+      <br>
+      <sl-dropdown>
+        <sl-button slot="trigger" caret>Languages</sl-button>
+        <sl-menu>
+          <sl-menu-item>English</sl-menu-item>
+          <sl-menu-item>French</sl-menu-item>
+          <sl-menu-item>Russian</sl-menu-item>
+          <sl-divider></sl-divider>
+          </sl-menu-item>
+        </sl-menu>
+      </sl-dropdown>
+
+      <p class="Price">$19.99</p>
+      <small>Released on the 19. December 2001</small>
+
+      <div slot="footer">
+        <sl-button variant="primary" pill>More Info</sl-button>
+        <sl-rating
+          label="Rating"
+          readonly
+          precision="0.5"
+          value="4.5"
+        ></sl-rating>
+        <sl-button variant="primary" pill>Buy Now</sl-button>
+      </div>
+    </sl-card>
+
+    <style>
+      .card-overview {
+        max-width: 600px;
+      }
+
+      .card-overview small {
+        color: var(--sl-color-neutral-500);
+      }
+
+      .card-overview [slot="footer"] {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .Price {
+        color: green;
+        font-family: sans-serif;
+      }
+      .title {
+        color: orange;
+      }
+      .header {
+        padding: 10px;
+        text-align: center;
+        background: black;
+        color: white;
+        font-size: 15px;
+      }
+    </style>
+  </body>
+</html>
