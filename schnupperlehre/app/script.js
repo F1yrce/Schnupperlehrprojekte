@@ -5,11 +5,12 @@ const filme = [
     titel: "Avatar",
     texttitel: "Avatar",
     jahr: 2009,
-    Preis: "CHF 21.99",
+    Preis: "CHF 12.99",
     genre: "Science Fiction",
     sprachen1: "English",
     sprachen2: "German",
-    sprachen3: "Koreanisch",
+    sprachen3: "French",
+    sprachen4: "Korean",
     beschreibung:
       "Avatar (2009) is about a Marine who joins an alien world and helps defend it from human exploitation.",
     beschreibung2:
@@ -21,11 +22,12 @@ const filme = [
     bewertung: "4",
     titel: "Titanic",
     jahr: 1997,
-    Preis: "CHF 12.99",
+    Preis: "CHF 4.99",
     texttitel: "Titanic",
     sprachen1: "English",
     sprachen2: "German",
-    sprachen3: "Swedish",
+    sprachen3: "French",
+    sprachen4: "Swedish",
     genre: "Drama/Romance",
     beschreibung:
       "Titanic (1997) is a romantic drama about a young couple from different social classes who fall in love aboard the ill-fated RMS Titanic.",
@@ -39,10 +41,11 @@ const filme = [
     titel: "Star Wars",
     texttitel: "Star Wars",
     jahr: 1977,
-    Preis: "CHF 9.99",
+    Preis: "CHF 5.99",
     sprachen1: "English",
     sprachen2: "German",
     sprachen3: "French",
+    sprachen4: "Swedish",
     genre: "Science Fiction",
     beschreibung:
       "Star Wars (1977) follows a farm boy, Luke Skywalker, who joins a rebellion to defeat the evil Empire and save the galaxy.",
@@ -111,7 +114,7 @@ function zeigeFilmDetails(filmId) {
             <p id="detail-beschreibung">${film.beschreibung2}</p>
             <p><strong>Jahr:</strong> <span id="detail-jahr">${film.jahr}</span></p>
             <p><strong>Genre:</strong> <span id="detail-genre">${film.genre}</span></p>
-            <button onclick="zeigeFilmeKacheln()">Zurück zur Übersicht</button>
+            <button onclick="zeigeFilmeKacheln()">Back to Menu</button>
         </div>
     `;
 }
