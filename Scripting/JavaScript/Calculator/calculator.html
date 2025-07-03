@@ -25,34 +25,62 @@
   </head>
 
   <body>
-    <div id="screen"></div>
     <div>
-      <button onclick="input (7)">7</button>
-      <button onclick="input (8)">8</button>
-      <button onclick="input (9)">9</button>
-      <button onclick="input ('/')">/</button>
-    </div>
-    <div>
-      <button onclick="input (4)">4</button>
-      <button onclick="input (5)">5</button>
-      <button onclick="input (6)">6</button>
-      <button onclick="input ('*')">*</button>
-    </div>
-    <div>
-      <button onclick="input (1)">1</button>
-      <button onclick="input (2)">2</button>
-      <button onclick="input (3)">3</button>
-      <button onclick="input ('-')">-</button>
-    </div>
-    <div>
-      <button onclick="input (0)">0</button>
-      <button onclick="input ('.')">.</button>
-      <button onclick="calculate()">=</button>
-      <button onclick="input ('+')">+</button>
-    </div>
-    <div>
-      <button onclick="deleteall()">clear</button>
-      <button onclick="deleteone()">delete</button>
+      <div id="screen"></div>
+      <div>
+        <button onclick="input (7)">7</button>
+        <button onclick="input (8)">8</button>
+        <button onclick="input (9)">9</button>
+        <button onclick="input ('/')">/</button>
+      </div>
+      <div>
+        <button onclick="input (4)">4</button>
+        <button onclick="input (5)">5</button>
+        <button onclick="input (6)">6</button>
+        <button onclick="input ('*')">*</button>
+      </div>
+      <div>
+        <button onclick="input (1)">1</button>
+        <button onclick="input (2)">2</button>
+        <button onclick="input (3)">3</button>
+        <button onclick="input ('-')">-</button>
+      </div>
+      <div>
+        <button onclick="input (0)">0</button>
+        <button onclick="input ('.')">.</button>
+        <button onclick="calculate()">=</button>
+        <button onclick="input ('+')">+</button>
+      </div>
+      <div>
+        <button onclick="deleteall()" class="buttonclear">clear</button>
+        <button onclick="deleteone()" class="buttondelete">delete</button>
+      </div>
     </div>
   </body>
+  <style>
+    .buttonclear {
+      color: whitesmoke;
+      background-color: red;
+      width: 200px;
+    }
+
+    .buttondelete {
+      color: whitesmoke;
+      background-color: darkgreen;
+      width: 200px;
+    }
+
+    button {
+      width: 100px;
+      height: 100px;
+      font-family: sans-serif;
+      font-size: 30px;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      background-color: bisque;
+    }
+  </style>
 </html>

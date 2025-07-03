@@ -1,0 +1,43 @@
+[
+    {
+      "title": "Inception",
+      "description": "A thief who steals secrets through dream-sharing tech is offered redemption.",
+      "fullDescription": "A thief who steals corporate secrets through dream-sharing technology is given a chance to erase his past.",
+      "price": "$9.99",
+      "rating": 4,
+      "image": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimages2.fanpop.com%2Fimage%2Fphotos%2F14300000%2FInception-inception-2010-14355477-1680-1050.jpg"
+    },
+    {
+      "title": "Interstellar",
+      "description": "A team travels through a wormhole in space in an attempt to save humanity.",
+      "fullDescription": "A team of explorers travels through a wormhole in space to ensure humanity’s survival.",
+      "price": "$12.99",
+      "rating": 3.5,
+      "image": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.moviehdwallpapers.com%2Fwp-content%2Fuploads%2F2014%2F03%2FInterstellar-2014-Movie-Wallpapers.jpg"
+    },
+    {
+      "title": "The Matrix",
+      "description": "A hacker discovers the world is a simulation and joins a rebellion.",
+      "fullDescription": "A hacker discovers the world is a simulation and joins a rebellion to fight its controllers.",
+      "price": "$8.49",
+      "rating": 4.5,
+      "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpicfiles.alphacoders.com%2F385%2F385304.jpg"
+    },
+    {
+        "title": "Harry Potter and the Sorcerer's Stone",
+        "description": "A young boy discovers he is a wizard and attends a magical school.",
+        "fullDescription": "A young boy discovers he is a wizard and attends a magical school, where he makes friends and faces dark forces.",
+        "price": "$7.99",
+        "rating": 4.8,
+        "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic1.moviewebimages.com%2Fwordpress%2Fwp-content%2Fuploads%2Fmovie%2FOhk1PaLqZdsTdncX7GY7xzknCTY0ND.jpg&f=1&nofb=1&ipt=e67d0422b8e68e278b48f5c14f0f87385c6d1607c79dd8a5b858906a302f315c"
+    },
+    {
+        "title": "Lord of the Rings: The Fellowship of the Ring",
+        "description": "A hobbit and his friends embark on a quest to destroy a powerful ring.",
+        "fullDescription": "A hobbit and his friends embark on a quest to destroy a powerful ring that could bring darkness to Middle-earth.",
+        "price": "$10.99",
+        "rating": 5,
+        "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages2.alphacoders.com%2F114%2Fthumb-1920-1144782.jpg&f=1&nofb=1&ipt=0e7e224109beaa7adb7b25a5e2db41676872dad4fe1d3beb9521cc085292d925"
+    }
+  ]
+  

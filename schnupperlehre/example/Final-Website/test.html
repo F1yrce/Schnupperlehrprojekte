@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Breadcrumb Demo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/themes/light.css" />
+    <script type="module"
+        src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/shoelace-autoloader.js"></script>
+    <style>
+        sl-breadcrumb-item::part(base) {
+            font-size: 90px;
+        }
+    </style>
+</head>
+
+<body>
+    <sl-breadcrumb>
+        <sl-breadcrumb-item>
+            <sl-icon slot="prefix" name="house"></sl-icon>
+        </sl-breadcrumb-item>
+        <sl-breadcrumb-item>Clothing</sl-breadcrumb-item>
+        <sl-breadcrumb-item>Shirts</sl-breadcrumb-item>
+    </sl-breadcrumb>
+</body>
+
+</html>

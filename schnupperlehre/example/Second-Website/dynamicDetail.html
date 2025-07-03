@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bücher</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            color: #333;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #2c3e50;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .book-container {
+            background-color: #fff;
+            border: 2px solid #ccc;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+        }
+
+        .book-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .book {
+            background-color: #fff;
+            border: 2px solid #ccc;
+            padding: 20px;
+            margin: 10px;
+            width: 250px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .book {
+            margin-bottom: 20px;
+        }
+
+        .book h3 {
+            color: #2c3e50;
+        }
+
+        .btn {
+            padding: 8px 12px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+
+        .btn:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html">Startseite</a>
+        <a href="detail.html">Bücher</a>
+        <a href="dynamicDetail.html">Dynamische Details</a>
+    </nav>
+
+    <h1>📖 Bücherliste</h1>
+    <div class="book-container"></div>
+
+    <script>
+        const books = [
+            {
+                title: "Der kleine Prinz",
+                description: "Ein poetisches Märchen mit tiefen Botschaften.",
+                image: "https://upload.wikimedia.org/wikipedia/en/0/05/Littleprince.JPG",
+                link: "index.html"
+            },
+            {
+                title: "Momo",
+                description: "Michael Endes Geschichte über Zeitdiebe und eine mutige Heldin.",
+                image: "https://upload.wikimedia.org/wikipedia/en/0/05/Littleprince.JPG"
+            },
+            {
+                title: "Die unendliche Geschichte",
+                description: "Eine fantastische Reise in das Reich Phantásien.",
+                image: "https://upload.wikimedia.org/wikipedia/en/0/05/Littleprince.JPG"
+            },
+            {
+                title: "Herr der Ringe",
+                description: "Ein episches Abenteuer in Mittelerde.",
+                image: "https://upload.wikimedia.org/wikipedia/en/0/05/Littleprince.JPG"
+            },
+            {
+                title: "Harry Potter",
+                description: "Ein weltbekannter Zauberlehrling erlebt Abenteuer in Hogwarts.",
+                image: "https://upload.wikimedia.org/wikipedia/en/0/05/Littleprince.JPG"
+            }
+        ];
+
+        const bookContainer = document.querySelector('.book-container');
+
+        books.forEach(book => {
+            const bookDiv = document.createElement('div');
+            bookDiv.classList.add('book');
+
+            if (book.image) {
+                const bookImage = document.createElement('img');
+                bookImage.src = book.image;
+                bookImage.alt = book.title;
+                bookImage.style.width = '100%';
+                bookImage.style.height = 'auto';
+                bookDiv.appendChild(bookImage);
+            }
+
+            const bookTitle = document.createElement('h3');
+            bookTitle.textContent = book.title;
+            bookDiv.appendChild(bookTitle);
+
+            const bookDescription = document.createElement('p');
+            bookDescription.textContent = book.description;
+            bookDiv.appendChild(bookDescription);
+
+            if (book.link) {
+                const infoButton = document.createElement('a');
+                infoButton.href = book.link;
+                infoButton.innerHTML = '<button class="btn">Mehr Infos</button>';
+                bookDiv.appendChild(infoButton);
+            }
+
+            bookContainer.appendChild(bookDiv);
+        });
+
+    </script>
+
+
+</body>
+
+</html>

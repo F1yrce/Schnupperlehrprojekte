@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Mein Lieblingsbuch</title>
+  <style>
+    body {
+      background-color: #f0f0f0;
+      color: #333;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    nav {
+      background-color: #2c3e50;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    h1 {
+      color: #2c3e50;
+    }
+
+    .container {
+      width: 80%;
+      margin: auto;
+      padding: 20px;
+      background-color: #fff;
+      border: 2px solid #ccc;
+    }
+
+    img {
+      width: 200px;
+      height: auto;
+      border: 2px solid #2c3e50;
+      padding: 5px;
+    }
+
+    ul,
+    ol {
+      text-align: left;
+      margin: 0 auto;
+      width: fit-content;
+    }
+
+    .book-list {
+      margin-top: 20px;
+    }
+
+    .book-item {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      padding: 10px;
+      margin: 5px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="index.html">Startseite</a>
+    <a href="detail.html">Bücher</a>
+    <a href="dynamicDetail.html">Dynamische Details</a>
+  </nav>
+
+  <header>
+    <h1>Willkommen zu meiner Buchseite!</h1>
+    <p>Hier teile ich meine Gedanken über Bücher.</p>
+  </header>
+
+  <div class="container">
+    <h1>📚 Mein Lieblingsbuch</h1>
+
+    <p>
+      Das Buch <strong>"Der kleine Prinz"</strong> ist ein
+      <em>zeitloser Klassiker</em>.<br />
+      Es wurde von Antoine de Saint-Exupéry geschrieben.
+    </p>
+
+    <a href="https://de.wikipedia.org/wiki/Der_kleine_Prinz" target="_blank">Mehr erfahren</a><br /><br />
+
+    <img src="https://upload.wikimedia.org/wikipedia/en/0/05/Littleprince.JPG" alt="Der kleine Prinz" />
+
+    <h2>Was ich daran mag:</h2>
+    <ul>
+      <li>Poesie</li>
+      <li>Fantasie</li>
+      <li>Lebensweisheiten</li>
+    </ul>
+
+    <h2>Meine Top 3 Bücher</h2>
+    <ol id="bookList" class="book-list">
+      <li class="book-item">Der kleine Prinz</li>
+      <li class="book-item">Momo</li>
+      <li class="book-item">Die unendliche Geschichte</li>
+    </ol>
+
+    <input type="text" id="newBook" placeholder="Neues Buch hinzufügen" />
+    <button class="btn" id="addBtn">Hinzufügen</button>
+    <button class="btn" id="deleteBtn">Letztes löschen</button>
+  </div>
+
+  <script>
+    document.getElementById("addBtn").addEventListener("click", function () {
+      const bookName = document.getElementById("newBook").value;
+      if (bookName.trim() !== "") {
+        const li = document.createElement("li");
+        li.className = "book-item";
+        li.textContent = bookName;
+        document.getElementById("bookList").appendChild(li);
+        document.getElementById("newBook").value = "";
+      }
+    });
+
+    document.getElementById("deleteBtn").addEventListener("click", function () {
+      const list = document.getElementById("bookList");
+      if (list.lastElementChild) {
+        list.removeChild(list.lastElementChild);
+      }
+    });
+  </script>
+</body>
+
+</html>

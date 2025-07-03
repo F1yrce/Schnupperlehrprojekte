@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Bücher</title>
+  <style>
+    body {
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+      color: #333;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #2c3e50;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .book-container {
+      background-color: #fff;
+      border: 2px solid #ccc;
+      padding: 20px;
+      margin: 20px auto;
+      width: 80%;
+    }
+
+    .book-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .book {
+      background-color: #fff;
+      border: 2px solid #ccc;
+      padding: 20px;
+      margin: 10px;
+      width: 250px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .book {
+      margin-bottom: 20px;
+    }
+
+    .book h3 {
+      color: #2c3e50;
+    }
+
+    .btn {
+      padding: 8px 12px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-top: 5px;
+    }
+
+    .btn:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="index.html">Startseite</a>
+    <a href="detail.html">Bücher</a>
+    <a href="dynamicDetail.html">Dynamische Details</a>
+  </nav>
+
+  <h1>📖 Bücherliste</h1>
+
+  <div class="book-container">
+    <div class="book">
+      <h3>Der kleine Prinz</h3>
+      <p>Ein poetisches Märchen mit tiefen Botschaften.</p>
+      <a href="index.html"><button class="btn">Mehr Infos</button></a>
+    </div>
+
+    <div class="book">
+      <h3>Momo</h3>
+      <p>Michael Endes Geschichte über Zeitdiebe und eine mutige Heldin.</p>
+    </div>
+
+    <div class="book">
+      <h3>Die unendliche Geschichte</h3>
+      <p>Eine fantastische Reise in das Reich Phantásien.</p>
+    </div>
+
+    <div class="book">
+      <h3>Harry Potter</h3>
+      <p>Ein weltbekannter Zauberlehrling erlebt Abenteuer in Hogwarts.</p>
+    </div>
+  </div>
+
+</body>
+
+</html>

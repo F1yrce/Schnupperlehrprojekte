@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Film Shop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Shoelace -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/themes/light.css" />
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/shoelace.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div class="navbar">
+    <div class="nav-links">
+      <sl-button variant="text">Home</sl-button>
+      <sl-button variant="text">Shop</sl-button>
+      <sl-button variant="text">Categories</sl-button>
+      <sl-button variant="text">Contact</sl-button>
+    </div>
+    <div class="theme-toggle">
+      <sl-switch id="darkModeToggle">Dark Mode</sl-switch>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <h2 class="section-title">🎬 Buy Your Favorite Films</h2>
+
+    <div class="movies-grid"></div>
+
+
+    <script>
+      async function loadMovies() {
+        try {
+          const response = await fetch("movie.json");
+          const movies = await response.json();
+          renderMovies(movies);
+        } catch (error) {
+          console.error("Fehler beim Laden der Filme:", error);
+        }
+      }
+
+      function renderMovies(movies) {
+        const grid = document.querySelector(".movies-grid");
+        grid.innerHTML = "";
+
+        movies.forEach(movie => {
+          const card = document.createElement("sl-card");
+
+          card.innerHTML = `
+            <img src="${movie.image}" class="movie-poster" slot="image" alt="${movie.title} Poster" />
+            <strong slot="header">${movie.title}</strong>
+            <div class="movie-details">
+              <p>${movie.description}</p>
+              <div class="movie-price">${movie.price}</div>
+            </div>
+            <sl-rating value="${movie.rating}" readonly label="Rating"></sl-rating>
+            <div slot="footer">
+              <sl-button variant="success" style="margin-right: 0.5rem;">Buy Now</sl-button>
+              <sl-button variant="primary" onclick='showInfo("${movie.title}", "${movie.fullDescription.replace(/"/g, '\\"')}")'>More Info</sl-button>
+            </div>
+          `;
+
+          grid.appendChild(card);
+        });
+      }
+
+      loadMovies();
+    </script>
+
+
+    <sl-dialog id="infoDialog" label="Movie Details">
+      <strong id="movieTitle"></strong>
+      <p id="movieDesc" style="margin-top: 1rem;"></p>
+      <sl-button slot="footer" variant="primary"
+        onclick="document.getElementById('infoDialog').hide()">Close</sl-button>
+    </sl-dialog>
+
+    <script>
+
+      function showInfo(title, desc) {
+        document.getElementById('movieTitle').textContent = title;
+        document.getElementById('movieDesc').textContent = desc;
+        document.getElementById('infoDialog').show();
+      }
+
+      const toggle = document.getElementById('darkModeToggle');
+      toggle.addEventListener('sl-change', event => {
+        document.documentElement.setAttribute('data-theme', event.target.checked ? 'dark' : 'light');
+      });
+    </script>
+</body>
+
+</html>
