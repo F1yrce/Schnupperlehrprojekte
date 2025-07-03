@@ -32,7 +32,7 @@ function zeigeFilmeKacheln() {
   const filmshop = document.getElementById("film-shop");
   filmshop.innerHTML = "";
   filme.forEach((film) => {
-    const kachel = document.createElement("div");
+    const kachel = document.createElement("sl-card");
     kachel.className = "film-kachel";
     kachel.innerHTML = `
   <img src="${film.bild}" alt="anpassen.titel">
